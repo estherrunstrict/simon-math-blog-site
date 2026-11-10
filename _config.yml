@@ -1,7 +1,7 @@
 title: 시몬의 수학 작업실
 description: 시몬이 직접 쓴 개념 설명과 풀이 과정을 모으는 수학 블로그
-url: https://estherrunstrict.github.io
-baseurl: /simon-math-blog-site
+url: https://simon.itdo.work
+baseurl: ""
 lang: ko
 timezone: Asia/Seoul
 markdown: kramdown
@@ -10,7 +10,7 @@ permalink: /stories/:title/
 future: false
 show_drafts: false
 repository: estherrunstrict/simon-math-blog-site
-write_url: https://github.com/estherrunstrict/simon-math-blog-site#새-글-쓰기
+write_url: https://itdo.work/wondo/math
 defaults:
   - scope:
       path: ""
