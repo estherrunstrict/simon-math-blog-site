@@ -1,0 +1,29 @@
+title: 시몬의 수학 작업실
+description: 시몬이 직접 쓴 개념 설명과 풀이 과정을 모으는 수학 블로그
+url: https://estherrunstrict.github.io
+baseurl: /simon-math-blog-site
+lang: ko
+timezone: Asia/Seoul
+markdown: kramdown
+highlighter: rouge
+permalink: /stories/:title/
+future: false
+show_drafts: false
+repository: estherrunstrict/simon-math-blog-site
+write_url: https://github.com/estherrunstrict/simon-math-blog-site#새-글-쓰기
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: 시몬
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - tests
+  - scripts
+  - .gitignore
+

@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="article">
+  <a class="back" href="{{ '/' | relative_url }}#stories">공부 이야기 목록</a>
+  <header>
+    <div class="story-meta"><span>{{ page.topic | escape }}</span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y년 %m월 %d일' }}</time></div>
+    <h1>{{ page.title | escape }}</h1>
+    <p class="muted">시몬이 직접 쓴 공부 이야기</p>
+  </header>
+  <div class="reading">{{ content }}</div>
+  <a class="action outline" href="{{ '/' | relative_url }}">다른 공부 이야기 읽기</a>
+</article>
+

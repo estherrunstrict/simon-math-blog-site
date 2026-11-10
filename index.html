@@ -1,0 +1,47 @@
+---
+layout: default
+title: 내 말로 설명하는 수학
+---
+{% assign latest = site.posts.first %}
+<div class="hero">
+  <section class="cover">
+    <h1>내 말로 설명하는<br>수학.</h1>
+    <p>풀어 보고, 설명하고, 다시 생각해요.<br>여기는 시몬의 생각이 자라는 작업실이에요.</p>
+    <div class="signature"><strong>글쓴이 시몬</strong><span>나만의 수학 기록</span></div>
+  </section>
+  <section class="paper" aria-label="최근 공부 이야기">
+    {% if latest %}
+    <span class="tag">가장 최근에 쓴 이야기</span>
+    <h2>{{ latest.title | escape }}</h2>
+    <p>{{ latest.summary | default: latest.excerpt | strip_html | truncate: 160 | escape }}</p>
+    <a class="action" href="{{ latest.url | relative_url }}">시몬의 설명 읽기</a>
+    {% else %}
+    <span class="tag">첫 이야기를 기다리는 중</span>
+    <h2>“왜 이렇게 풀었냐면…”</h2>
+    <p>답을 적는 것에서 한 걸음 더.<br>내가 이해한 방법을 내 말로 설명해요.</p>
+    <a class="action" href="{{ site.write_url | escape }}">내 공부 이야기 쓰기</a>
+    {% endif %}
+  </section>
+</div>
+<div class="body-grid">
+  <section id="stories">
+    <div class="section-heading"><h2>공부 이야기</h2>{% if site.posts.size > 0 %}<span class="muted">{{ site.posts.size }}편의 기록</span>{% endif %}</div>
+    <p class="muted">내가 이해한 개념과 답을 찾아간 과정을 나눠요.</p>
+    {% for post in site.posts %}
+    <article class="story"><a href="{{ post.url | relative_url }}">
+      <div class="story-meta"><span>{{ post.topic | escape }}</span><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y년 %m월 %d일' }}</time></div>
+      <h3>{{ post.title | escape }}</h3>
+      <p>{{ post.summary | default: post.excerpt | strip_html | truncate: 180 | escape }}</p>
+      <span class="read">설명과 풀이 읽기</span>
+    </a></article>
+    {% else %}
+    <div class="empty"><h3>첫 페이지는 시몬의 이야기로.</h3><p>오늘 배운 개념 하나, 직접 쓴 풀이 한 장.<br>설명이 완벽하지 않아도 괜찮아요. 내가 어떻게 생각했는지부터 적어 봐요.</p><p class="muted">공개한 글이 생기면 이곳에서 읽을 수 있어요.</p></div>
+    {% endfor %}
+  </section>
+  <aside class="aside">
+    <img src="{{ '/assets/wondo.png' | relative_url }}" width="96" height="96" alt="수학 공부를 함께하는 원도">
+    <div><h3>설명하면 더 잘 보여요.</h3><p>“왜 이 식을 썼을까?”<br>“다르게 풀 수도 있을까?”<br>내 생각을 글로 남겨 봐요.</p></div>
+    <div class="note"><h3>답보다 궁금한 것</h3><p>시몬이 어떤 생각을 했는지, 어디서 다시 생각했는지 함께 읽어 주세요.</p></div>
+  </aside>
+</div>
+

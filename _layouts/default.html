@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="{{ page.summary | default: site.description | escape }}">
+  <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+  <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+  <link rel="icon" href="{{ '/assets/favicon.svg' | relative_url }}" type="image/svg+xml">
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 건너뛰기</a>
+  <header class="mast">
+    <a class="brand" href="{{ '/' | relative_url }}"><span class="mark" aria-hidden="true"></span>{{ site.title | escape }}</a>
+    <nav aria-label="주 메뉴"><a href="{{ '/' | relative_url }}#stories">공부 이야기</a><a href="{{ site.write_url | escape }}">글 쓰기</a></nav>
+  </header>
+  <main id="main">{{ content }}</main>
+  <footer class="foot"><span>시몬이 쓰고, 배우고, 다시 생각하는 곳.</span><span>원도와 함께하는 수학 기록</span></footer>
+</body>
+</html>
+
